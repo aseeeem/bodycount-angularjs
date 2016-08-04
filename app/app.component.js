@@ -14,6 +14,7 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'This is BodyCount';
         this.tagline = 'Here, we count bodies.';
+        this.buildings = BUILDINGS;
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -25,6 +26,11 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+/* Define buildings here, pass it to AppComponent */
+var BUILDINGS = [
+    { id: 1, rooms: [1, 2], name: "Dobbs" },
+    { id: 2, rooms: [1, 2], name: "Wentworth Hall" }
+];
 var Building = (function () {
     function Building() {
     }
