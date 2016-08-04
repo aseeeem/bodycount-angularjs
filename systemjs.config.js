@@ -1,7 +1,7 @@
-/**
- * System configuration for Angular 2 samples
- * Adjust as necessary for your application needs.
- */
+/*
+  Thank you to Angularjs developers for providing this script
+  Your quickstart is the best
+*/
 (function(global) {
   // map tells the System loader where to look for things
   var map = {

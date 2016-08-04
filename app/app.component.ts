@@ -5,4 +5,13 @@ import {Component} from '@angular/core';
   selector: 'bodycount-app',
   templateUrl: 'app/app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'This is BodyCount';
+  tagline = 'Here, we count bodies.'
+}
+
+export class Building {
+  id: number;
+  rooms: number[];
+  name: string;
+}

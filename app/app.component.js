@@ -12,6 +12,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'This is BodyCount';
+        this.tagline = 'Here, we count bodies.';
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -23,4 +25,10 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+var Building = (function () {
+    function Building() {
+    }
+    return Building;
+}());
+exports.Building = Building;
 //# sourceMappingURL=app.component.js.map
