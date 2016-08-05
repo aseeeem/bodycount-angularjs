@@ -1,5 +1,6 @@
 // Imports component decarator
 import {Component} from '@angular/core';
+import {Building} from './building';
 
 @Component({
   selector: 'bodycount-app',
@@ -7,17 +8,14 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'This is BodyCount';
-  tagline = 'Here, we count bodies.'
-  public buildings = BUILDINGS;
+  tagline = 'Here, we count bodies.';
+  buildings = BUILDINGS;
+  selectedBuilding: Building;
+  onSelect(building: Building) { this.selectedBuilding = building; }
+
 }
 /* Define buildings here, pass it to AppComponent */
 const BUILDINGS: Building[] = [
   {id: 1, rooms: [1, 2], name: "Dobbs"},
   {id: 2, rooms: [1, 2], name: "Wentworth Hall"}
 ];
-
-export class Building {
-  id: number;
-  rooms: number[];
-  name: string;
-}

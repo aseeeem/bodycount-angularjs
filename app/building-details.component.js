@@ -8,28 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Imports component decarator
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'This is BodyCount';
-        this.tagline = 'Here, we count bodies.';
-        this.buildings = BUILDINGS;
+var BuildingDetailComponent = (function () {
+    function BuildingDetailComponent() {
     }
-    AppComponent.prototype.onSelect = function (building) { this.selectedBuilding = building; };
-    AppComponent = __decorate([
+    BuildingDetailComponent = __decorate([
         core_1.Component({
-            selector: 'bodycount-app',
-            templateUrl: 'app/app.component.html'
+            selector: 'building-details',
+            templateUrl: 'app/building-details.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], BuildingDetailComponent);
+    return BuildingDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-/* Define buildings here, pass it to AppComponent */
-var BUILDINGS = [
-    { id: 1, rooms: [1, 2], name: "Dobbs" },
-    { id: 2, rooms: [1, 2], name: "Wentworth Hall" }
-];
-//# sourceMappingURL=app.component.js.map
+exports.BuildingDetailComponent = BuildingDetailComponent;
+//# sourceMappingURL=building-details.component.js.map
