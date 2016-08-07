@@ -1,14 +1,8 @@
 <div *ngIf="building">
-  <h2>{{building.name}}</h2>
-  <div>
-    <label>Building Number {{building.id}}</label>
-    <br />
-    <label>Here is the list of rooms in your selected building</label>
-    <ul *ngFor="let room of building.rooms">
-      <li>
+    <label>List of rooms for {{building.name}}</label>
+    <ul class="list-group">
+      <li *ngFor="let room of building.rooms" class="list-group-item">
         {{room}}
       </li>
     </ul>
-    <!-- <input [(ngModel)]="building.rooms" placeholder="building.rooms"  /> -->
-  </div>
 </div>

@@ -1,12 +1,18 @@
 <h1>{{title}}</h1>
 <p>{{tagline}}</p>
 <h2>Select a building to see the list of rooms</h2>
-<ul class="buildingList">
-  <li *ngFor="let building of buildings"
-      [class.selected]="building === selectedBuilding"
-      (click)="onSelect(building)">
-    <span class="badge">{{building.id}}.</span> {{building.name}}
-  </li>
-</ul>
-<!-- Data here is input by the building details component -->
-<building-details [building]="selectedBuilding"></building-details>
+<div class="row">
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li *ngFor="let building of buildings"
+          class="list-group-item"
+          (click)="onSelect(building)">
+         {{building.name}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <!-- Data here is input by the building details component -->
+    <building-details [building]="selectedBuilding"></building-details>
+  </div>
+</div>
