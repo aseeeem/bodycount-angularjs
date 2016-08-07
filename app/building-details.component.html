@@ -1,13 +1,14 @@
-<ul>
-  <!-- By adding the class.selected property, it'll change the class of the object if selected -->
-  <li *ngFor="let building of buildings" (click)="onSelect(building)">
-    <span>{{building.id}}</span> {{building.name}}
-  </li>
-</ul>
-<h2>Don't see the building you want? Add another!</h2>
 <div *ngIf="building">
-  <div id="buildingInputDiv">
-    <label>name: </label>
-    <input [(ngModel)]="building.name" placeholder="name" />
+  <h2>{{building.name}}</h2>
+  <div>
+    <label>Building Number {{building.id}}</label>
+    <br />
+    <label>Here is the list of rooms in your selected building</label>
+    <ul *ngFor="let room of building.rooms">
+      <li>
+        {{room}}
+      </li>
+    </ul>
+    <!-- <input [(ngModel)]="building.rooms" placeholder="building.rooms"  /> -->
   </div>
 </div>

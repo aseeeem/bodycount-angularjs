@@ -10,17 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Imports component decarator
 var core_1 = require('@angular/core');
+var building_details_component_1 = require('./building-details.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'This is BodyCount';
         this.tagline = 'Here, we count bodies.';
         this.buildings = BUILDINGS;
     }
-    AppComponent.prototype.onSelect = function (building) { this.selectedBuilding = building; };
+    AppComponent.prototype.onSelect = function (building) {
+        this.selectedBuilding = building;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'bodycount-app',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/app.component.html',
+            directives: [building_details_component_1.BuildingDetailComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -30,6 +34,6 @@ exports.AppComponent = AppComponent;
 /* Define buildings here, pass it to AppComponent */
 var BUILDINGS = [
     { id: 1, rooms: [1, 2], name: "Dobbs" },
-    { id: 2, rooms: [1, 2], name: "Wentworth Hall" }
+    { id: 2, rooms: [1], name: "Waston Hall" }
 ];
 //# sourceMappingURL=app.component.js.map

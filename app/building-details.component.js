@@ -9,9 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var building_1 = require('./building');
 var BuildingDetailComponent = (function () {
     function BuildingDetailComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', building_1.Building)
+    ], BuildingDetailComponent.prototype, "building", void 0);
     BuildingDetailComponent = __decorate([
         core_1.Component({
             selector: 'building-details',
