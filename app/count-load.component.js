@@ -8,23 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Imports component decarator
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'This is BodyCount';
-        this.tagline = 'Here, we count bodies.';
+var CountLoadComponent = (function () {
+    function CountLoadComponent() {
     }
-    AppComponent = __decorate([
+    CountLoadComponent = __decorate([
         core_1.Component({
-            selector: 'bodycount-app',
-            templateUrl: 'app/app.component.html',
-            directives: []
+            selector: 'countData',
+            templateUrl: 'app/count-load.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], CountLoadComponent);
+    return CountLoadComponent;
 }());
-exports.AppComponent = AppComponent;
-/* Define buildings here, pass it to AppComponent */
-//# sourceMappingURL=app.component.js.map
+exports.CountLoadComponent = CountLoadComponent;
+//# sourceMappingURL=count-load.component.js.map
