@@ -6,5 +6,4 @@ import { Building } from './building';
   templateUrl: 'app/building-details.component.html'
 })
 export class BuildingDetailComponent {
-
 }

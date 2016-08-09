@@ -1,3 +1,7 @@
 <h1>{{title}}</h1>
 <p>{{tagline}}</p>
-<h2>Start by clicking on a building you want!</h2>
+<h2>Here is the current count of people</h2>
+<ul>
+	<li *ngFor="let count of counts">{{count.time}}:{{count.count}}</li>
+</ul>
+

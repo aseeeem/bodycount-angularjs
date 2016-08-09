@@ -10,8 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Imports component decarator
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(http) {
+        this.http = http;
         this.title = 'This is BodyCount';
         this.tagline = 'Here, we count bodies.';
         this.buildings = BUILDINGS;
@@ -22,7 +24,7 @@ var AppComponent = (function () {
             selector: 'bodycount-app',
             templateUrl: 'app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], AppComponent);
     return AppComponent;
 }());
