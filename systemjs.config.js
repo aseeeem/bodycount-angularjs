@@ -42,7 +42,11 @@
   ngPackageNames.forEach(setPackageConfig);
   var config = {
     map: map,
-    packages: packages
+    packages: packages,
+    paths: {
+      'rxjs/operators/*': 'node_modules/rxjs/operators/*.js',
+      'rxjs/add/operator/*' : 'node_modules/rxjs/add/operator/*.js'
+    }
   };
   System.config(config);
 })(this);

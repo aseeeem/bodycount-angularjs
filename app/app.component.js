@@ -10,30 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Imports component decarator
 var core_1 = require('@angular/core');
-var building_details_component_1 = require('./building-details.component');
+var http_1 = require('@angular/http');
+require('rxjs/Rx');
+var Rx_1 = require('rxjs/Rx');
 var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'This is BodyCount';
-        this.tagline = 'Here, we count bodies.';
-        this.buildings = BUILDINGS;
+    function AppComponent(_http) {
+        var _this = this;
+        this._http = _http;
+        this.welcome = "Welcome to our population tracker!";
+        this.title = "Here's how many people we've seen";
+        this.footer_details = "Wentworth 2016";
+        this.counts = Rx_1.Observable.interval(2000)
+            .switchMap(function () { return _this._http.get("app/countJSONdata.json"); })
+            .map(function (res) { return res.json().count; });
     }
-    AppComponent.prototype.onSelect = function (building) {
-        this.selectedBuilding = building;
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'bodycount-app',
-            templateUrl: 'app/app.component.html',
-            directives: [building_details_component_1.BuildingDetailComponent]
+            templateUrl: 'app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-/* Define buildings here, pass it to AppComponent */
-var BUILDINGS = [
-    { id: 1, rooms: [1, 2], name: "Dobbs" },
-    { id: 2, rooms: [1], name: "Waston Hall" }
-];
 //# sourceMappingURL=app.component.js.map

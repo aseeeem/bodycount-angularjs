@@ -1,25 +1,19 @@
 // Imports component decarator
 import {Component} from '@angular/core';
-import {Building} from './building';
-import {BuildingDetailComponent} from './building-details.component';
+import {Response, Http} from '@angular/http';
+import 'rxjs/Rx';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
   selector: 'bodycount-app',
-  templateUrl: 'app/app.component.html',
-  directives: [BuildingDetailComponent]
+  templateUrl: 'app/app.component.html'
 })
 export class AppComponent {
-  title = 'This is BodyCount';
-  tagline = 'Here, we count bodies.';
-  buildings = BUILDINGS;
-  selectedBuilding: Building;
-  onSelect(building: Building) {
-    this.selectedBuilding = building;
-  }
-
+  public welcome = "Welcome to our population tracker!";
+  public title = "Here's how many people we've seen";
+  public footer_details = "Wentworth 2016";
+  constructor(private _http: Http) {  }
+  counts = Observable.interval(2000)
+  .switchMap(() => this._http.get("app/countJSONdata.json"))
+  .map((res: Response) => res.json().count);
 }
-/* Define buildings here, pass it to AppComponent */
-const BUILDINGS: Building[] = [
-  {id: 1, rooms: [1, 2], name: "Dobbs"},
-  {id: 2, rooms: [1], name: "Waston Hall"}
-];
