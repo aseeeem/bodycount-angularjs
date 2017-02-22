@@ -1,6 +1,7 @@
 # Welcome to the Image Based Population Counter Angular2 based web application
 
 The main goal for this application was to asnychronously load data from a JSON file and display that for a user to see
+Due to complications within the team, I ended up having to write this overnight. Take that for what it is! Maybe one day I'll take another look at it.
 
 # Some dependencies not installed automatically:
 
